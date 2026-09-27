@@ -1,30 +1,84 @@
-# Brillance SaaS Landing Page
+# Brillance — SaaS Landing Page
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A polished marketing **landing page for "Brillance"** — a fictional SaaS
+product for effortless custom contract billing ("Smart. Simple. Brilliant.").
+Built with Next.js 14 + Tailwind, packed with animated landing sections,
+a product dashboard preview, pricing, testimonials, and FAQ.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/gileb64375-5584s-projects/v0-brillance-saa-s-landing-page)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/3dXVjtY7FVp)
+## What it does
 
-## Overview
+- **Hero section** with headline, CTAs, and product imagery.
+- **Interactive feature cards** with auto-rotating progress highlights.
+- **Dashboard preview** section showcasing the product UI.
+- **Integration section** ("Effortless Integration") with updated variants.
+- **Stats band** ("Numbers that speak") — key metrics callouts.
+- **Documentation section** — docs/teaser links.
+- **Testimonials** carousel/section.
+- **FAQ** accordion (`faq-section`).
+- **Pricing** tiers section.
+- **CTA + footer** sections.
+- Sticky header navigation and dark/light theme provider.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Tech stack
+
+- **Framework:** Next.js 14 (App Router) + React 18 + TypeScript
+- **UI:** Tailwind CSS, shadcn-style components, Radix UI primitives,
+  `lucide-react` icons
+- **Tooling:** ESLint, PostCSS
+
+## Quick start
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+```
+
+Build / serve production:
+
+```bash
+npm run build
+npm run start
+```
+
+> No environment variables required. This is a static marketing page with
+> no backend, no API routes, and no server actions.
+
+## Project structure
+
+```
+app/                        # Next.js App Router (layout, page, globals.css)
+components/
+  hero-section.tsx          # Hero headline + CTAs
+  feature-cards.tsx         # Auto-rotating feature highlights
+  dashboard-preview.tsx     # Product dashboard mockup
+  smart-simple-brilliant.tsx# Brand statement section
+  your-work-in-sync.tsx     # Feature: work in sync
+  effortless-integration*.tsx # Integration sections
+  numbers-that-speak.tsx    # Stats/metrics band
+  documentation-section.tsx # Docs teaser
+  testimonials-section.tsx  # Customer testimonials
+  faq-section.tsx           # FAQ accordion
+  pricing-section.tsx       # Pricing tiers
+  cta-section.tsx           # Call-to-action
+  footer-section.tsx        # Footer
+  header.tsx                # Sticky nav header
+  theme-provider.tsx        # Theme (dark/light)
+lib/utils.ts                # Shared helpers
+public/                     # Static assets
+next.config.mjs             # `output: 'export'` — ships as a static site
+```
 
 ## Deployment
 
-Your project is live at:
+Fully static — no server required:
 
-**[https://vercel.com/gileb64375-5584s-projects/v0-brillance-saa-s-landing-page](https://vercel.com/gileb64375-5584s-projects/v0-brillance-saa-s-landing-page)**
+```bash
+npm run build   # outputs to ./out
+```
 
-## Build your app
+Deploy `./out` to any static host (Cloudflare Pages, GitHub Pages,
+Netlify, Vercel). Live on Cloudflare Pages (see repo homepage).
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/projects/3dXVjtY7FVp](https://v0.app/chat/projects/3dXVjtY7FVp)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Built by Girish Lade — https://ladestack.in
